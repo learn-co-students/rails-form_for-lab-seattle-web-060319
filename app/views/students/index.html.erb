@@ -1,0 +1,5 @@
+<h3>School Roster</h3>
+
+<% @students.each do |student| %>
+  <%= link_to student.to_s, student_path(student) %><br>
+<% end %>
