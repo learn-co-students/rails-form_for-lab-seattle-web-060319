@@ -1,19 +1,19 @@
 require 'rails_helper'
 
 
-describe SchoolClassesController do
+describe SchoolclassesController do
 
   describe "POST create" do
     context "with valid attributes" do
-      it "creates a new school_class" do
+      it "creates a new schoolclass" do
         expect{
-          post :create, params: { :school_class => { :title => "Computer Science", :room_number => 5 } }
-        }.to change(SchoolClass,:count).by(1)
+          post :create, params: { :schoolclass => { :title => "Computer Science", :room_number => 5 } }
+        }.to change(Schoolclass,:count).by(1)
       end
 
-      it "redirects to the new school_class" do
-        post :create, params: { :school_class => { :title => "Computer Science", :room_number => 5 } }
-        expect(response).to redirect_to SchoolClass.last
+      it "redirects to the new schoolclass" do
+        post :create, params: { :schoolclass => { :title => "Computer Science", :room_number => 5 } }
+        expect(response).to redirect_to Schoolclass.last
       end
     end
   end
